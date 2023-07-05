@@ -39,6 +39,8 @@ resource "aws_docdb_cluster" "main" {
   db_subnet_group_name    = aws_docdb_subnet_group.main.name
   vpc_security_group_ids  = [ aws_security_group.main.id ]
   kms_key_id              = var.kms_key_arn
+  storage_encryted        = true
+
 }
 
 resource "aws_docdb_cluster_instance" "main" {
